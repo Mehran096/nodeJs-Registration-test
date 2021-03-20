@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>header}}
+    <title>Document</title>
+</head>
+<body>
+  {{>navbar}}
+<!------ Include the above in your HEAD tag ---------->
+<section class="design-process-section" id="process-tab">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12"> 
+        <!-- design process steps--> 
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs justify-content-center process-model more-icon-preocess" role="tablist">
+          <li role="presentation" class="active"><a href="#discover" aria-controls="discover" role="tab" data-toggle="tab"><i class="fa fa-search" aria-hidden="true"></i>
+            <p>Discover</p>
+            </a></li>
+          <li role="presentation"><a href="#strategy" aria-controls="strategy" role="tab" data-toggle="tab"><i class="fa fa-send-o" aria-hidden="true"></i>
+            <p>Strategy</p>
+            </a></li>
+          <li role="presentation"><a href="#optimization" aria-controls="optimization" role="tab" data-toggle="tab"><i class="fa fa-qrcode" aria-hidden="true"></i>
+            <p>Optimization</p>
+            </a></li>
+          <li role="presentation"><a href="#content" aria-controls="content" role="tab" data-toggle="tab"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            <p>Content</p>
+            </a></li>
+          <li role="presentation"><a href="#reporting" aria-controls="reporting" role="tab" data-toggle="tab"><i class="fa fa-clipboard" aria-hidden="true"></i>
+            <p>Reporting</p>
+            </a></li>
+        </ul>
+        <!-- end design process steps--> 
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="discover">
+            <div class="design-process-content">
+              <h3 class="semi-bold">Discovery</h3>
+             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat</p>
+             </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="strategy">
+            <div class="design-process-content">
+              <h3 class="semi-bold">Strategy</h3>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat</p>
+              </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="optimization">
+            <div class="design-process-content">
+              <h3 class="semi-bold">Optimization</h3>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat</p>
+               </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="content">
+            <div class="design-process-content">
+              <h3 class="semi-bold">Content</h3>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat</p>              
+              </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="reporting">
+            <div class="design-process-content">
+              <h3>Reporting</h3>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid unt ut laoreet dolore magna aliquam erat volutpat. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{{!-- </section><a style="font-size: 8pt; text-decoration: none" target="_blank" href="http://www.frontendfreecode.com">Frontend Code</a> --}}
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{{!-- secret javascript --}}
+
+<script>$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+  var href = $(e.target).attr('href');
+  var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+  $('.process-model li').removeClass();
+
+  $curr.addClass("active");
+  $curr.prevAll().addClass("visited");
+});</script>
+        
+</body>
+</html>
